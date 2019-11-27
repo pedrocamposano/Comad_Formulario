@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Portal de notícias</title>
+		
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+        <link href="css/style2.css" rel="stylesheet">
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+
+	<body>
+
+       <div class="wrap2" style="box-shadow: 0px 0px 3px ;">
+	    <div class="container" style="box-shadow: 0px 0px 3px ;">
+		  <% if (validacao.length > 0) { %>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-danger">
+						<strong>Atenção!</strong>
+						<ul>
+							<% for (var i=0; i<validacao.length; i++) { %>
+								<li> <%=validacao[i].msg %></li>
+							<%}%>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<%}%>
+
+
+			<img src="images/comad.jpg"  class="img-fluid img-thumbnail"/>
+             <hr></hr>
+             
+			<div class="container" id="titul" style="margin-bottom: 50px;">
+
+	    	 <h1 style="text-align: center;">Conhecendo Boas Práticas</h1>
+               <h3 style="text-align: center;" >O COMAD quer conhecer ações públicas e não-governamental que atuam na
+                prevenção, tratamento, reinserção social e repressão às drogas no município de
+                 Dourados.</h3>
+          </div>
+          <hr></hr>
+
+
+	    	<div class="row" >
+	    		<div class="col-md-12">
+	    			<form action = "/formularios/salvar" method="post" enctype="multipart/form-data">
+
+						<div class="form-group">
+							<label for="nome">Nome da instituição ou grupo:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta1"   name="resposta1" value="<%=formulario.resposta1%>"/>
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Nome do responsável pela instituição ou grupo:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta2"     name="resposta2" value="<%=formulario.resposta2%>"/>
+						</div>
+						
+						<div class="form-group">
+							<label for="pwd">Nome da ação, projeto, unidade:</label>
+							 <input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta3"   name="resposta3" value="<%=formulario.resposta3%>"/>
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Contatos:</label>
+							<input type="number" class="form-control" placeholder="Campo obrigatório" id="resposta4"   name="resposta4" value="<%=formulario.resposta4%>"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd">Qual público alvo, idade de atendimento:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta5"   name="resposta5" value="<%=formulario.resposta5%>"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd">Natureza da ação, projeto ou unidade:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta6"   name="resposta6" value="<%=formulario.resposta6%>"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd">O que a ação, projeto, unidade realiza na prática:</label>
+							 <input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta7"   name="resposta7" value="<%=formulario.resposta7%>"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd">A ação,projeto, unidade realiza alguma atividade específica para prevenção às drogas ou
+                            para atender usuários de drogas, se sim, quais?:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta8"  name="resposta8" value="<%=formulario.resposta8%>"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd">Quanto tempo existe em Dourados:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta9"   name="resposta9" value="<%=formulario.resposta9%>"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd">Existe vínculo com instituição pública ou religiosa:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta10"   name="resposta10" value="<%=formulario.resposta10%>"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd">Como é a forma de manutenção financeira para realizar o atendimento:</label>
+							<input type="text" class="form-control" placeholder="Campo obrigatório" id="resposta11"   name="resposta11" value="<%=formulario.resposta11%>"/>
+						</div>
+
+
+                        <div class="form-group">
+							<label for="pwd">Imagem:</label>
+							 <input class="form-control" type="file" name="uploaded_image" accept="" />
+						</div>
+                         
+
+
+                         <div class="row ver_mais">
+						<button type="submit" class="btn btn-default btn-primary" >Cadastrar</button>
+					    </div>
+					</form>
+		    	</div>
+	    	</div>
+	    </div>
+	</div>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	</body>
+</html>

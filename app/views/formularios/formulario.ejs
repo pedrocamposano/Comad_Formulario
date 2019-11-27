@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>COMAD_Formulário</title>
+		
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+         <link href="css/style2.css" rel="stylesheet">
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/cabeçalho.jpg" />
+
+		<script type="text/javascript">
+			function Confirma(param){
+				if (confirm("Confirma a exclusão do formulário?")){
+					location.href="excluir?id_formulario=" + param;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<img src="images/cabeçalho.jpg" class="imag1"/>
+				</div>
+
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="\">INÍCIO</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+	    <div class="contenedor-formulario">
+          <div class="wrap">
+              <form action="" class="formulario" >
+    	        <p> <img src="images/marcaprefeitura.jpg" class="" /></p>
+    	          <hr></hr>
+	    				 <p class="desc">Nome da instituição ou grupo:</p>
+	    				<p ><%=formulario[0].resposta1%></p>
+		  
+		    			<p class="desc">Nome do responsável pela instituição ou grupo:</p>
+		    			<p><%=formulario[0].resposta2%></p>
+		    			
+		    			<p class="desc">Nome da ação, projeto, unidade:</p>
+		    			<p><%=formulario[0].resposta3%></p>
+		    			<p class="desc">Contatos:</p>
+		    			<p><%=formulario[0].resposta4%></p>
+		    			<p class="desc">Qual público alvo, idade de atendimento:</p>
+		    			<p><%=formulario[0].resposta5%></p>
+		    			<p class="desc">Natureza da ação, projeto ou unidade:</p>
+		    			<p><%=formulario[0].resposta6%></p>
+		    			<p class="desc">O que a ação, projeto, unidade realiza na prática:</p>
+		    			<p><%=formulario[0].resposta7%></p>
+		    			<p class="desc">A ação,projeto, unidade realiza alguma atividade específica para prevenção às drogas ou
+                            para atender usuários de drogas, se sim, quais?:</p>
+		    			<p><%=formulario[0].resposta8%></p>
+		    			<p class="desc">Quanto tempo existe em Dourados:</p>
+		    			<p><%=formulario[0].resposta9%></p>
+		    			<p class="desc">Existe vínculo com instituição pública ou religiosa:</p>
+		    			<p><%=formulario[0].resposta10%></p>
+		    			<p class="desc">Como é a forma de manutenção financeira para realizar o atendimento:</p>
+		    			<p><%=formulario[0].resposta11%></p>
+		    			<br />
+		    			    
+		    		</form>
+		    	</div>
+	    	</div>
+
+	    	<div class="row ver_mais">
+	    		<button type="button" class="btn btn-default" id="excluir" onclick="Confirma(<%=formulario[0].id_formulario%>)"> <a href="#"> Excluir Formulario </a>
+	    		</button>
+
+				
+
+
+
+	    	</div>
+
+	    </div>
+	
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	</body>
+</html>

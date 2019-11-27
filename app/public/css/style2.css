@@ -1,0 +1,82 @@
+$primary: ;
+$light-primary: ;
+$white: ;
+$divider: ;
+$error: ;
+
+$borde: 2px;
+$font-family: "Roboto", Arial;
+
+*
+	margin: 0;
+	padding: ;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+body{
+	background: $white;
+	font-family: $font-family;
+	border-top: 30px solid $primary;
+}
+.wrap{
+	width: 900px;
+	max-width: 900px;
+	padding: 40px;
+	margin: auto
+	background: 000;
+	box-shadow: 0px 0px 3px ;
+	display: inline-block;
+	background: white;
+}
+.contenedor-formulario{
+	width: 100%;
+	color: $000;
+	padding: 50px;
+    align-items: center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+.formulario{
+		width: 100%;
+		margin: auto;
+}
+img{
+	margin-top: -10px;
+}
+.desc{
+	font-size: 17px;
+}
+.input-group{
+	position: relative;
+	margin-bottom: 32px;
+}
+.imag1{
+	height: 150px;
+	width: 162px;
+	margin-left: 130px;
+	margin-top: 15px;
+}
+.img2{
+	height: 80px;
+	width: 270px;
+}
+#titul{
+
+  font-size: 70px;
+  margin-bottom: 100px;
+}
+
+hr{
+      color: #b3b1b1;
+      background-color: #b3b1b1;
+      height: 1px;
+    }
+.ver_mais{
+	text-align: center;
+	background:#FFF;
+	padding:20px;
+}
+
